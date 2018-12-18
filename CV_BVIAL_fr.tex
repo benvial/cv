@@ -1,0 +1,280 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV
+% XeLaTeX Template
+% Version 1.0 (5/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+
+
+\geometry{left=6.1cm,top=1.8cm,right=1.5cm,bottom=0.7cm,nohead,nofoot}
+
+\def\firstname{Benjamin}
+\def\familyname{Vial}
+\def\FileSubject{curriculum vitae}
+\def\FileAuthor{\firstname~\familyname}
+\def\FileTitle{\FileSubject~de~\firstname~\familyname}
+\def\FileKeyWords{\firstname~\familyname, \FileSubject}
+
+
+
+  \RequirePackage[unicode]{hyperref}% unicode is required for unicode pdf metadata
+  \hypersetup{
+    breaklinks,
+    baseurl       = http://,
+    pdfborder     = 0 0 0,
+    pdfpagemode   = UseNone,% do not show thumbnails or bookmarks on opening
+    pdfstartpage  = 1,
+%    pdfproducer   = {\LaTeX{}},% will/should be set automatically to the correct TeX engine used
+    bookmarksopen = true,
+    bookmarksdepth= 2,% to show sections and subsections
+    pdfauthor   = {\FileAuthor},%
+    pdftitle    = {\FileTitle},%
+    pdfsubject  = {\FileSubject},%
+    pdfkeywords = {\FileKeyWords},%
+    pdfcreator  = {\LaTeX},%
+    pdfproducer = {\LaTeX}
+    }
+
+
+\addbibresource{publications.bib} % Specify the bibliography file to include publications
+
+\begin{document}
+
+\header{Benjamin}{~Vial}{Docteur Ingénieur | Optique et Photonique} % Your name and current job title/field
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+\section{Contact}
+76 quartier le Clos
+13360 Roquevaire, France
+\faPhone~~+44~7840~029~744~~/~~+33~630~609~609
+\faEnvelope~~\href{mailto:b.vial@qmul.ac.uk}{b.vial@qmul.ac.uk}
+\faUser~~\href{www.benjaminvial.org}{benjaminvial.org}
+~
+\faPhone~~+33~630~609~609
+\section{Informations}
+né le 09/11/1984
+nationalité française
+\section{Langues}
+français : langue maternelle
+anglais : courant
+espagnol : bases
+\section{Programmation}
+\textbf{systèmes d'exploitation}
+Linux, Windows
+\textbf{languages et scripts}
+C, C++, Matlab, Python, Mathematica, \LaTeX
+\textbf{applications}
+Comsol Multiphysics, Gmsh, GetDP, Gsolver, Gimp, LibreOffice
+\section{Intérêts}
+\textbf{professionels}
+photonique
+processus résonants
+interaction lumière matière
+méthodes numériques
+méthode des éléments finis
+analyse modale
+fabrication
+caracterisation
+\textbf{personnels}
+jouer de la guitare
+musique
+football
+snowboard
+marche à pied
+voyages
+cuisine
+\end{aside}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Formation}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{Apr. 2013}
+{Thèse de doctorat {\normalfont en Physique}}
+{\href{http://www.fresnel.fr/spip/}{Institut Fresnel}, CNRS, Centrale Marseille, Aix Marseille Universit\'e, Marseille, France}
+{Optique, Photonique et traitement d'image}
+%------------------------------------------------
+\entry
+{Oct. 2009}
+{Master {\normalfont en Physique}}
+{\href{http://www.centrale-marseille.fr/}{Centrale Marseille}~--~
+\href{http://www.lma.cnrs-mrs.fr/}{Laboratoire de Mécanique et d'Acoustique}, CNRS, Marseille, France}
+{Mécanique, Physique et Ingéniérie, specialisation en Acoustique}
+
+\entry
+{Oct. 2009}
+{Diplôme d'{Ingénieur Généraliste}}
+{\href{http://www.centrale-marseille.fr/}{Centrale Marseille}, Marseille, France}
+{}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\vspace*{-0.2cm}
+\section{Activités de recherche}
+
+\begin{entrylist}
+
+
+\entry
+{depui\\Jan. 2017}
+{Postdoctorat}
+{\href{http://antennas.eecs.qmul.ac.uk/}{Queen Mary, University of London}, Londres, RU}
+{Projet AOTOMAT: Outils d'optimisation pour la conception de matériaux et composants electromagnétiques.
+}
+
+\entry
+{Jul. 2014 \\Dec. 2016}
+{Postdoctorat}
+{\href{http://www.eecs.qmul.ac.uk}{Queen Mary University of London}, Londres, RU}
+{Projet Quest for Ultimate Electromagnetics Using Spatial Transformations (QUEST).
+Optique de transformation appliquée à la conception, l'analyse et la caractérisation de composants à base de métamatériaux.
+}
+
+
+%------------------------------------------------
+\entry
+{Nov. 2013\\Jan. 2014}
+{Postdoctorat}
+{\href{http://www.fresnel.fr/spip/}{Institut Fresnel}, Marseille, France}
+{Antennes résonantes. \'Etude numérique du couplage entre lumière et particules sub longueur d'onde.
+Analyse modale des résonances électriques et magnétiques pour contrôler l'émission et la densité locale d'états.
+}
+%------------------------------------------------
+\entry
+{Mai 2013 \\Oct. 2013}
+{Postdoctorat}
+{\href{http://www.fresnel.fr/spip/}{Institut Fresnel}, Marseille, France}
+{Développement d'outils de simulation pour le tracé de rayons en milieu complexe.
+}
+
+%------------------------------------------------
+\entry
+{Oct. 2009\\Avr. 2013}
+{Thèse de Doctorat en Physique}
+{\href{http://www.fresnel.fr/spip/}{Institut Fresnel}~--~\href{http://www.silios.com/}{Silios Technologies}, Marseille, France}
+{\emph{\'Etude de résonateurs électromagnétiques ouverts par approche modale.
+Application au filtrage multispectral dans l'infrarouge.(mi-temps université/entreprise)}\\
+Modèles numérique part éléments finis pour le calcul des modes propres de
+ l'opérateur de Maxwell pour des structures ouvertes.
+Représentation modale du champ diffracté donnant par un modèle réduit et conditions
+d'excitation résonante des modes à fuites.
+  Application à la conception, fabrication et caractérisation de
+  filtres diffractifs dans l'infrarouge pour des imageurs multispectraux: passe bande en
+   transmission et coupe bande en réflexion basés sur des métamatériaux.
+}
+
+
+%------------------------------------------------
+
+\entry
+{Avr. 2009 \\Sept. 2009}
+{Stage, Master recherche}
+{\href{http://www.lma.cnrs-mrs.fr/}{Laboratoire de Mécanique et d'Acoustique, CNRS, Marseille, France}}
+{\emph{Réduction de modèle d'instrument à anche pour la synthèse sonore : un approche par modes propres orthogonaux.}\\
+\'Etude numérique et validation de la décomposition du champ de pression
+sur les modes propres orthogonaux, optimale au sens de la distribution d'énergie.
+}
+
+
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	Teaching/supervising experience SECTION
+%----------------------------------------------------------------------------------------
+\vspace*{-0.2cm}
+\section{Expérience d'enseignement/encadrement}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2012}
+{Tuteur de stage}
+{{Institut Fresnel}, CNRS, Centrale Marseille, Marseille, France}
+{Optimisation de filtres spectraux diffractifs (1 élève ingénieur, 3 mois).}
+
+%------------------------------------------------
+\entry
+{2011}
+{Tuteur de stage}
+{{Institut Fresnel}, CNRS, Centrale Marseille, Marseille, France}
+{Optimisation de l'absorption dans des cellules solaires (4 élèves ingénieur, 1 mois).}
+
+%------------------------------------------------
+
+\end{entrylist}
+
+\vspace*{-0.2cm}
+\section{Awards and honours}
+
+{Best PhD thesis in 2013 award} from the {\href{http://ed352.sciences.univmed.fr/}{Doctoral School 352, Physics and Condensed Matter Science}}
+
+{Best PhD thesis in 2013 award from {\href{www.cnano-paca.fr/}{CNano PACA}}, finalized research category}
+
+%------------------------------------------------------------------
+%
+\newgeometry{left=2cm,top=1cm,right=1.5cm,bottom=1.cm,nohead,nofoot}
+
+ \section{Publications}
+% % sorting=ydnt,
+ \printbibsection{article}{Articles dans des revues internationales à comité de lecture} % Print all articles from the bibliography
+%
+
+% \printbibsection{inproceedings}{international peer-reviewed conferences/proceedings}
+
+%
+\begin{refsection} %
+\nocite{*}
+\printbibliography[sorting=chronological, type=inproceedings, title={Conférences internationales avec actes}, keyword={lecture comittee}, heading=subbibliography]
+\end{refsection}
+
+\printbibsection{book}{Contribution à un chapitre de livre} % Print all books from the bibliography
+% 
+%
+%
+% \begin{refsection} %
+% \nocite{*}
+% \printbibliography[sorting=chronological, type=inproceedings, title={Conférences internationales sans actes}, keyword={conference}, heading=subbibliography]
+% \end{refsection}
+%
+%
+% \begin{refsection}
+% \nocite{*}
+% \printbibliography[sorting=chronological, type=inproceedings, title={Conférences nationales et séminaires}, keyword={france}, heading=subbibliography]
+% \end{refsection}
+%
+% \begin{refsection}
+% \nocite{*}
+% \printbibliography[sorting=chronological, type=misc, title={En préparation}, keyword={preparation}, heading=subbibliography]
+% \end{refsection}
+
+
+\end{document}
