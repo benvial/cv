@@ -1,0 +1,291 @@
+
+
+\documentclass{cv}
+
+\geometry{left=6.0cm,top=1.8cm,right=1.5cm,bottom=0.7cm,nohead,nofoot}
+
+
+\def\firstname{Benjamin}
+\def\familyname{Vial}
+\def\FileSubject{curriculum vitae}
+\def\FileAuthor{\firstname~\familyname}
+\def\FileTitle{\firstname~\familyname's~\FileSubject}
+\def\FileKeyWords{\firstname~\familyname, \FileSubject}
+
+
+\RequirePackage[unicode]{hyperref}% unicode is required for unicode pdf metadata
+\hypersetup{
+	breaklinks,
+	baseurl       = http://,
+	pdfborder     = 0 0 0,
+	pdfpagemode   = UseNone,% do not show thumbnails or bookmarks on opening
+	pdfstartpage  = 1,
+	bookmarksopen = true,
+	bookmarksdepth= 2,% to show sections and subsections
+	pdfauthor   = {\FileAuthor},%
+	pdftitle    = {\FileTitle},%
+	pdfsubject  = {\FileSubject},%
+	pdfkeywords = {\FileKeyWords},%
+	pdfcreator  = {\LaTeX},
+}
+
+
+
+\addbibresource{better.bib} % Specify the bibliography file to include publications
+
+\begin{document}
+
+\header{Benjamin}{~Vial}{Docteur Ingénieur | Optique, Photonique et micro-ondes} 
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+	\section{Contact}
+	\faHome~~146 Glyn road
+	London E5 0JE, UK
+	\faPhone~~+44~7840~029~744
+	\faEnvelope~~\href{mailto:b.vial@qmul.ac.uk}{b.vial@qmul.ac.uk}
+	\faUser~~\href{http://bvial.info/}{bvial.info}
+	\section{Informations}
+	né le 09/11/1984
+	nationalité française
+	\section{Langues}
+	français : langue maternelle
+	anglais : courant
+	espagnol : bases
+	\section{Programmation}
+	\textbf{systèmes d'exploitation}
+	Linux, Windows
+	\textbf{languages et scripts}
+	Python, Matlab, Mathematica, \LaTeX, C, C++, Q\#, HTML, CSS
+	\textbf{applications}
+	git, Comsol Multiphysics, Fenics, Gmsh, GetDP, Gimp, LibreOffice, Labview
+	\section{Intérêts}
+	\textbf{professionels}
+	Photonique
+	Optique
+	ingéniérie micro-ondes
+	processus résonants
+	interaction lumière matière
+	analyse modale
+	domaine THz
+	métamatériaux et métasurfaces
+	Optique de Transformation
+	modélisation numérique
+	méthode des éléments finis
+	methode modale de Fourier
+	FDTD
+	techniques d'optimization
+	problèmes inverse
+	apprentissage machine
+	physique des ondes
+	fabrication
+	caracterisation
+	science ouverte
+	\textbf{personnels}
+	jouer de la guitare, musique
+	football, marche à pied
+	voyages, cuisine
+\end{aside}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+
+% \vspace*{-0.6cm}
+
+\section{Formation}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{Apr. 2013}
+{Thèse de doctorat {\normalfont en Physique}}
+{\href{http://www.fresnel.fr/spip/}{Institut Fresnel}, CNRS, Centrale Marseille, Aix Marseille Universit\'e, Marseille, France}
+{Optique, Photonique et traitement d'image}
+%------------------------------------------------
+\entry
+{Oct. 2009}
+{Master {\normalfont en Physique}}
+{\href{http://www.centrale-marseille.fr/}{Centrale Marseille}~--~
+\href{http://www.lma.cnrs-mrs.fr/}{Laboratoire de Mécanique et d'Acoustique}, CNRS, Marseille, France}
+{Mécanique, Physique et Ingéniérie, specialisation en Acoustique}
+
+\entry
+{Oct. 2009}
+{Diplôme d'{Ingénieur Généraliste}}
+{\href{http://www.centrale-marseille.fr/}{Centrale Marseille}, Marseille, France}
+{Formation scientifique généraliste}
+%------------------------------------------------
+\end{entrylist}
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\vspace*{-0.2cm}
+\section{Activités de recherche}
+
+\begin{entrylist}
+	%------------------------------------------------
+
+
+
+	\entry
+	{depuis\\Jan. 2019}
+	{Postdoctorat}
+	{\href{http://antennas.eecs.qmul.ac.uk/}{Queen Mary, University of London}, London, UK}
+	{\href{https://animate-research.com/}{Projet ANIMATE}: couplage non-linéaire et propriétés effectives de métamatériaux ferroélectriques, conception inverse pour maximiser leur ajustabilité, 
+	cractérisation de matériaux dans les domaines micro-ondes et THz.
+	}
+
+
+	\entry
+	{Jan. 2017 \\Déc. 2018}
+	{Postdoctorat}
+	{\href{http://antennas.eecs.qmul.ac.uk/}{Queen Mary, University of London}, London, UK}
+	{Projet AOTOMAT: Outils d'optimisation pour la conception de matériaux et composants electromagnétiques.
+	}
+
+	\entry
+	{Juil. 2014 \\Déc. 2016}
+	{Postdoctorat}
+	{\href{http://antennas.eecs.qmul.ac.uk/}{Queen Mary, University of London}, London, UK}
+	{\href{http://www.quest-spatial-transformation.org/}{Projet QUEST: Quest for Ultimate Electromagnetics Using Spatial Transformations.}
+	Optique de Transformation appliquée à la conception, l'analyse et la caractérisation de composants à base de métamatériaux.
+	}
+
+
+	\entry
+	{Nov. 2013\\ Jan. 2014}
+	{Postdoctorat}
+	{\href{http://www.fresnel.fr/}{Institut Fresnel}, Marseille, France}
+	{
+	Antennes résonantes. \'Etude numérique du couplage entre lumière et particules sub longueur d'onde.
+	Analyse modale des résonances électriques et magnétiques pour contrôler l'émission et la densité locale d'états.
+	}
+	%------------------------------------------------
+	\entry
+	{May 2013 \\Oct. 2013}
+	{Postdoctorat}
+	{\href{http://www.fresnel.fr/}{Institut Fresnel}, Marseille, France}
+	{
+		Développement d'outils de simulation pour le tracé de rayons en milieu complexe.
+	}
+
+	%------------------------------------------------
+	\entry
+	{Oct. 2009\\Avr. 2013}
+	{Thèse de Doctorat en Physique}
+	{\href{http://www.fresnel.fr/}{Institut Fresnel}~--~\href{http://www.silios.com/}{Silios Technologies}, Marseille, France}
+	{\emph{\href{http://tel.archives-ouvertes.fr/index.php?halsid=slas337fv1oqlj1okgkq7q42i5&view_this_doc=tel-00918651&version=1}
+			{\'Etude de résonateurs électromagnétiques ouverts par approche modale.
+			Application au filtrage multispectral dans l'infrarouge.}} (\emph{mi-temps université/entreprise})\\
+			Modèles numérique part éléments finis pour le calcul des modes propres de
+			 l'opérateur de Maxwell pour des structures ouvertes et décomposition modale sur modes quasi-normaux.
+			  Application à la conception, fabrication et caractérisation de
+			  filtres diffractifs dans l'infrarouge pour des imageurs multispectraux: passe bande en
+			   transmission et coupe bande en réflexion basés sur des métamatériaux.
+	}
+
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	Teaching/supervising experience SECTION
+%----------------------------------------------------------------------------------------
+
+\vspace*{-0.2cm}
+\section{Expérience d'enseignement/encadrement}
+
+\begin{entrylist}
+	%------------------------------------------------
+	\entry
+	{2011-2012}
+	{Tuteur de stage}
+	{{Institut Fresnel}, CNRS, Centrale Marseille, Marseille, France}
+	{Optimisation de filtres spectraux diffractifs (1 élève ingénieur, 6 mois).\\
+		Optimisation de l'absorption dans des cellules solaires (4 élèves ingénieur, 3 mois).
+	}
+
+	%------------------------------------------------
+	\entry
+	{2019}
+	{Assistant d'Enseignement}
+	{\href{http://antennas.eecs.qmul.ac.uk/}{Queen Mary, University of London}, London, UK}
+	{Informatique quantique. Cours sur les portes et circuits quantiques. 
+	TDs sur ordinateur et projets de fin d'année et language de programmation Q\# et Python (10 élèves de Master, 6 mois).}
+
+	%------------------------------------------------
+
+\end{entrylist}
+
+\vspace*{-0.2cm}
+\section{Prix et récompenses}
+
+  {Prix de la meilleure thèse 2014} {\href{https://ecole-doctorale-352.univ-amu.fr/en}{\'Ecole Doctorale 352, Physique et Science de la Matière}}
+
+  {Prix de la meilleure thèse 2014 {\href{https://www.cnano-paca.fr/index.php?option=com_content&view=article&id=80}{CNano PACA}}, catégorie recherche finalisée}
+
+
+\newgeometry{left=1.5cm,top=1.8cm,right=1.5cm,bottom=0.7cm,nohead,nofoot}
+
+
+
+%----------------------------------------------------------------------------------------
+%	Referees contact SECTION
+%----------------------------------------------------------------------------------------
+
+
+\section{Références}
+
+\begin{minipage}{.6\textwidth}
+	\textbf{Prof Yang Hao}\\
+	\faHome~~School of Electronic Engineering and Computer Science\\
+	Queen Mary University of London\\
+	Peter Landin Building, 10 Godward Square, Mile End Road\\
+	London E1 4FZ, United Kingdom\\
+	\faEnvelope~~\href{mailto:y.hao@qmul.ac.uk}{y.hao@qmul.ac.uk}\\
+	\faPhone~~+44 20 7882 5341\\
+	\faUser~~\href{http://www.eecs.qmul.ac.uk/~yang/}{www.eecs.qmul.ac.uk/~yang/}
+\end{minipage}%
+\begin{minipage}{0.4\textwidth}
+	\textbf{Prof Andr\'e Nicolet}\\
+	\faHome~~Aix-Marseille Université\\
+	Institut Fresnel (UMR CNRS 6133)\\
+	Domaine Universitaire de Saint-Jérôme\\
+	F13397 Marseille cedex 20, France\\
+	\faEnvelope~~\href{mailto:andre.nicolet@fresnel.fr}{andre.nicolet@fresnel.fr}\\
+	\faPhone~~+33 4 91 28 87 73\\
+	\faUser~~\href{https://www.fresnel.fr/perso/nicolet/}{www.fresnel.fr/perso/nicolet/}
+\end{minipage}
+
+
+\vspace*{0.5cm}
+
+%----------------------------------------------------------------------------------------
+%	Publications SECTION
+%----------------------------------------------------------------------------------------
+
+
+\section{Publications}
+
+\printbibsection{article}{Articles dans des revues internationales à comité de lecture}
+
+\printbibsection{book}{Contribution à un chapitre de livre}
+
+\printbibsectionkey{inproceedings}{Conférences internationales avec actes}{lecture comittee}
+
+\printbibsectionkey{inproceedings}{Conférences internationales sans actes}{conference}
+
+\printbibsectionkey{misc}{Thèse de doctorat}{phdthesis}
+
+\printbibsectionkey{misc}{Codes et logiciels libres}{code}
+
+\printbibsectionkey{misc}{En préparation}{prep}
+
+
+\end{document}

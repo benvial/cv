@@ -1,0 +1,555 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{academia}
+
+\geometry{left=2cm,top=2cm,right=2cm,bottom=2cm,nohead,nofoot}
+
+\def\firstname{Benjamin}
+\def\familyname{Vial}
+\def\FileSubject{research plan}
+\def\FileAuthor{\firstname~\familyname}
+\def\FileTitle{\firstname~\familyname's~\FileSubject}
+\def\FileKeyWords{\firstname~\familyname, \FileSubject}
+
+\RequirePackage[unicode]{hyperref}% unicode is required for unicode pdf metadata
+\hypersetup{
+    breaklinks,
+    baseurl       = http://,
+    pdfborder     = 0 0 0,
+    pdfpagemode   = UseNone,% do not show thumbnails or bookmarks on opening
+    pdfstartpage  = 1,
+%    pdfproducer   = {\LaTeX{}},% will/should be set automatically to the correct TeX engine used
+    bookmarksopen = true,
+    bookmarksdepth= 2,% to show sections and subsections
+    pdfauthor   = {\FileAuthor},%
+    pdftitle    = {\FileTitle},%
+    pdfsubject  = {\FileSubject},%
+    pdfkeywords = {\FileKeyWords},%
+    pdfcreator  = {\LaTeX},%
+    pdfproducer = {\LaTeX}
+}
+
+\addbibresource{better.bib}
+\addbibresource{~/.bib/zotero.bib}
+
+\begin{document}
+
+\header{Research}{~Plan}{Benjamin Vial~|~Application to the post of Lecturer in Quantum and Terahertz Experimental Electronic
+Systems} 
+
+\vspace*{1cm }
+\newrefsection
+%%%%%%%%%%%% Summary %%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Summary}
+
+
+I will focus my research on three main areas, 
+aligned with the expertise of the Antennas and Electromagnetic resarch group 
+and related  to the School of Engineering and Computer Science aims for teaching. 
+The first one is to develop THz research and experimental facilities and foster collaboration with 
+colleagues in QMUL for biomedical applications. The second direction is aimed 
+at studying and realizing reconfigurable antennas and metamaterials at 
+microwave and THz frequencies. Those two areas will be supported by my 
+experience in developing bespoke numerical schemes and optimization 
+algorithms, including the development of inovative tools based on machine 
+learning, which constitutes the third topic that I propose to pursue.
+
+
+\vspace*{1cm }
+%%%%%%%%%%%% THz and bio %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Terahertz technologies for biomedical applications}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\wfig{bio}{(a) Biological applications of THz technologies. Typical THz-TDS imaging setup in transmission (b) and reflection (c).\label{fig:bio}}{0.5}{R}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ## Proteins
+% ## Cells
+Terahertz (THz) radiation generally refers to the frequency band spanning 0.1–10 THz, which lies between
+the microwave and infrared regions of the electromagnetic spectrum. Due to the lack of
+effective sources and detectors, this ‘THz gap’ remained
+unexplored until advances in physics during the 1980s. 
+Specifically, the rapid development of modern terahertz time-domain spectroscopy
+(THz-TDS), has been widely utilized in applications such as materials
+science, astronomy, microelectronics, and biomedical science\autocite{dhillon2017TerahertzScience2017}.
+There has been great interest in applying THz spectroscopy to probe and characterize various 
+biomaterials in recent decades because most low-frequency biomolecular motions 
+lie in the same frequency range as THz radiation\autocite{sunRecentAdvancesTerahertz2017}.
+
+I plan to foster existing collaboration between the group and colleagues 
+at QMUL to study applications of THz science for biomedical research. 
+Dr Akram Alomainy and Dr James Kelly, two lecturers in the Antenna
+and Electromagnetics group, are likely to secure a grant to invest 
+on a new fiber optics based THz-TDS that would improve on the existing facility 
+in term of sensitivity and spectral resolution. 
+In addition, Professor Mira Naftaly, a Senior Research Scientist at National Physical Laboratory, 
+has recently joined the antenna group as a visiting academic and will 
+surely provide her expertise and invaluable insights in terahertz technologies.
+
+
+
+\subsection{Real time monitoring of proteins and biomaterial characterization}
+Conformational changes, which are essential
+for protein function, directly affect the dielectric response in the THz range (see Fig.~\ref{fig:bio}a). 
+Due to its distinctive spectral responses to THz radiation, the dynamic hydration shell can
+be precisely determined by probing protein-induced fast solvation dynamics by 
+THz spectroscopy, and predicted by molecular dynamics simulations\autocite{sushkoTerahertzSpectralDomain2013}. 
+Innovative measurements setups, design of waveplates for efficient 
+measurements of circular dichroism\autocite{chengQuasiOpticalSubTHzCircular2020} 
+and parameter extraction will be explored 
+to help understand and monitor structural changes in biomolecules over time.\\
+THz-TDS is an in situ non-destructive technique that has been used in QMUL to 
+help understanding the setting mechanisms and associated dynamics of cementitious
+materials\autocite{tianAtomicVibrationalOrigins2015}. 
+This collaboration with Gregory Chass in the School of Physical and Chemical Sciences 
+would benefit from further developments to test and characterize novel biomaterials for 
+medical and dental applications as well as natural mineralisation processes.
+
+
+\subsection{THz imaging}
+A valuable tool for exploration of materials and biological samples is 
+the capability to do imaging, and I plan to add this feature to the 
+experimental facilities of the antenna laboratory. 
+In particular, THz phase
+imaging, an advanced imaging technology which combines the benefits of THz and commonly used phase
+imaging techniques, has recently received significant attention, with both pulsed 
+and continuous-wave (CW) imaging systems\autocite{wanTerahertzPhaseImaging2020}. Pulsed THz phase imaging is a coherent measurement, 
+which includes terahertz pulsed imaging (TPI) based on femtosecond
+laser and holographic imaging in the time domain, both allowing phase and amplitude 
+information of the electric
+field to be recorded. CW THz phase imaging is mainly based on digital holography, 
+interferometry and ptychography. These systems can obtain the complex amplitude 
+by capturing diffraction patterns and applying numerical reconstruction techniques. 
+THz imaging systems typically operate as follows (see Fig.~\ref{fig:bio}b and c): the light from pulsed
+femtosecond laser pumps a crystal to generate a broadband THz radiation. 
+The scattered radiation (either in transmission or reflection mode) 
+is mapped pixel by pixel using x-y
+translation of the sample or the beam in the focal plane. 
+Off-axis parabolic mirrors are used to focus the
+generated THz pulse onto the sample and to collect the reflected or
+transmitted pulse after interaction with the sample. 
+For biomedical imaging, systems are mostly used in a reflective geometry
+ because the biological samples typically have high water contents
+ and are generally strongly absorptive. 
+ I will study the feasibility of such imaging systems and apply for funding through EPSRC in close 
+ interaction with the group in order to identify the needs and most suitable technology.
+Another advance that I envision for biological applications is to enhance terahertz biomedical
+imaging by introducing exogenous contrast agents, such as gold nanoparticles, 
+which have been shown to improve contrast.
+
+\subsection{Cells and tissue}
+Early studies of the origin of contrast between healthy and
+diseased tissue in the THz region focused on changes in
+water content\autocite{yuPotentialTerahertzImaging2012}. 
+However, water content differences are not only limited to differences between 
+healthy and diseased tissues but also the type of tissue, 
+and that structural changes in healthy cells were
+responsible in part for the changes in the THz properties\autocite{syTerahertzSpectroscopyLiver2010}.
+Computational methods and inverse modelling are needed to interpret the  
+EM response of biological tissues and cells. 
+Effective media approximations have been widely
+used to estimate their effective permittivity. A more rigorous approach 
+that I have successfully employed is the two scale convergence homogenization method
+\autocite{guenneauHomogenizationThreedimensionalFinite2000}. In comparison
+with analytical models such as
+Maxwell-Garnett or Bruggeman theories, this approach is not limited to a
+few canonical inclusions geometries, and can handle arbitrary topologies
+and media with spatially varying properties, which will help modelling accurately 
+the interaction of tissues with THz waves, such as 
+human skin\autocite{wangTHzSensingHuman2021}. Full wave EM simulations 
+and high frequency\autocite{crasterHighfrequencyHomogenizationPeriodic2010}
+or high contrast\autocite{cherednichenkoHomogenizationSystemHighcontrast2015} 
+homogenization techniques must be further developed, and fitting to a variety of clinical data, 
+with the addition of inverse modelling, will help develop technology and 
+aid better understanding of how terahertz interacts with tissues. 
+
+
+\subsection{Enhanced detection with metamaterials and metasurfaces}
+
+Several bottlenecks exist in the development of terahertz phase
+imaging and detection. The lack of suitable beam shaping components to control the
+profile of the object illumination beam affects image quality and 
+the lack of terahertz imaging lenses with large numerical aperture makes it
+difficult to collect high-frequency components and thus reduces resolution. 
+Therefore, it is necessary to further develop high-performance
+terahertz sources, detectors and imaging devices. I plan to investigate the 
+design of imaging lenses at THz frequencies, in particular using my 
+expertise in inverse design. The fabrication will be carried out with the group's
+two-photon polymerization high-precision 3D printer (Nanoscribe), 
+a state-of-the-art facility in additive manufacturing microfabrication. 
+ 
+
+ \newpage
+%%%%%%%%%%%% Tunable MTM and antennas %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Reconfigurable metamaterials and antennas}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\wfig{ms}{Multi-scale view of ferroelectric materials and the
+different length scales and associated theory and
+modelling.\label{fig:ms}}{0.5}{R}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Multifunctional and reconfigurable systems are increasingly demanded for
+a wide range of applications in Electromagnetics and Photonics
+\autocite{oliveriReconfigurableElectromagneticsMetamaterials2015}. 
+In parallel, the development of artificial media and metamaterials, allowing unprecedented
+control of electromagnetic (EM) waves by carefully engineered
+subwavelength structures, has stimulated the research interest in
+tunable materials.  I will focus 
+primarily on ferroelectric materials
+play a crucial role in microwave applications needing reconfigurability
+\autocite{tagantsevFerroelectricMaterialsMicrowave2018} (such as antenna beam steering, phase shifters, filters, and tunable power
+splitters) but plan to extend my research to other type of tuning 
+strategies, such as phase change materials, liquid crystals, graphene or 
+mechanically adjustable elements. Due to their inherent
+multi-physics and multi-scale behaviour (see Fig.~\ref{fig:ms}),
+ferroelectrics need improved theoretical, numerical and experimental 
+tools as well as a proper linking of the different length scales in order to advance
+their understanding and guide their synthesis for use in microwave
+devices.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\wfig{msthz}{BST metasurface composed of micro-pillars on thin film. (a) Extracted BST permitivity (left: real part, right: imaginary part) from THz-TDS transmission measurement of the film alone. (b) measured and simulated with the Fourier modal method (FMM) transmission through the metasurface.\label{fig:bstms}}{0.5}{L}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hypertarget{sec:meta}{%
+\subsection{Ferroelectric metasurfaces}\label{sec:ferrometasurf}}
+
+Structured BST film with micro-arrays have been fabricated by transfer printing 
+in the School of Material Science at QMUL (cf. Fig.~\ref{fig:bstms}). 
+Thin BST films deposited on silicon substrate where characterized by 
+THz-TDS and the permittivity extracted (cf. Fig.~(\ref{fig:bstms}a). Transmission through the metasurface 
+agrees well with numerical simulation with the Fourier Modal Method (FMM) where 
+the measured permittivity of the substrate and BST were included (see Fig.~\ref{fig:bstms}b). 
+With those encouraging preliminary results, I will continue 
+this area of research and help improve, characterize and test different 
+BST and ferroelectric materials at THz frequencies. Geometric optimization of the 
+microarray will be carried out to obtain functionalities such as beam steering, 
+lensing or filtering. Change in permittivity due to an applied voltage or temperature change 
+must be measured and will be used in further design of tunable ferroelectric metadevices. 
+In order to extract parameters from transmission measurements, I have developed an open-source Python 
+package\autocite{tdsxtract} 
+with tools for pre and post processing 
+raw experimental data, and obtain the permittivity of sample through minimization 
+of the error between measured and analytical transmission coefficients. This 
+will be further improved and can readily be applied to arbitrary incident 
+angle and polarization, and would be easily extended to multilayer stacks with 
+several layers, reflection mode operation, and anisotropic and magnetic materials.
+
+
+
+
+\hypertarget{sec:dft}{%
+\subsection{Atomistic modelling of ferroelectrics using Density
+Functional Theory (DFT)}\label{sec:dft}}
+
+\emph{Ab initio} simulation of ferroelectic materials from their
+atomistic arrangement will be carried out to identify properties and new
+components with improved performances. Structural
+composition, proportions of atoms (e.g.~in Barium strontium titanate
+(BST) \({\rm Ba}_{x}{\rm Sr}_{1-x}{\rm TiO}_3\) with a barium ratio of
+\(x\)), oxygen vacancies, can be studied by such models. In addition,
+the effect of external stimuli such as applied voltage, mechanical
+strain can be included, whilst the temperature dependence in DFT can be
+added \emph{a posteriori}. The primary focus will be on the frequency
+dependence of permittivity and tunability, as it will affect the final
+design of devices in the radiofrequency and THz spectrum. Along with \emph{in
+silico} new material discovery through computational material science,
+experimental exploration of the new ferroelectrics needs to be done to
+verify and inform the modeller.
+
+\hypertarget{sec:pf}{%
+\subsection{Phase field modelling of ferroelectric
+domains}\label{sec:pf}}
+
+The electromechanical properties of ferroelectrics can be studied by the
+phase field method \autocite{suContinuumThermodynamicsFerroelectric2007},
+where one considers an order parameter (usually the polarization vector)
+which varies continuously. Hence domain patterns with uniform
+polarization are separated by domain walls where the polarization
+switches smoothly. This intermediate mesoscale modelling is necessary
+and relevant as the effective properties of ceramics are often dependant
+of the domain arrangement and grain boundaries. Polycrystalline
+ferroelectrics, the effect of domain grain size, distribution,
+boundaries thickness, charge defects and structural inclusions, can be
+studied as a function of electromechanical loading, allowing to
+reproduce P-E loops from which one can extract the tunability and
+directly compare with experiments. The free energy functional used in
+phase field models has to be adjusted to fit the properties of single
+domains, and the coefficients can be obtained from DFT simulations and/or measurements
+\autocite{volkerMultiscaleModelingFerroelectric2011}. 
+
+
+\hypertarget{sec:meta}{%
+\subsection{Metamaterials and homogenization}\label{sec:meta}}
+
+I will continue the study of effective properties of ferroelectric
+metamaterials with subwavelength features for enhanced tunability
+composites \autocite{vialEnhancedTunabilityFerroelectric2019, vialHighFrequencyMetaferroelectrics2021}. 
+To enable the fabrication of those metaceramics and the measurement of their
+properties at DC, microwave and THz frequencies, I will
+identify relevant length scale compatible with our fabrication and
+measurement capabilities, including the newly acquired 3D printer 
+with ceramic-based resins, as well as electrode layout for biasing the samples.
+The study of properties at the mesoscale from phase field simulations
+will be included in the homogenization.
+
+\vspace*{1cm}
+%%%%%%%%%%%% CEM and ML%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Inverse design and data driven computational electromagnetism}
+
+I believe my expertise in numerical simulation and optimization algorithms 
+would benefit the antenna group and will be a key to the success of the 
+different research projects that I plan to undertake. I have developed bespoke 
+open-source numerical tools employed in Electromagnetics, Photonics 
+and antenna design that, together with commercial software, will help in 
+designing novel devices and interpreting experimental results: 
+(i) a versatile finite element based code\autocite{gyptis} with mesh generation, solving and post-processing 
+complex electromagnetic problems; (ii) an 
+implementation of the Fourier Modal Method\autocite{nannos} (also known as Rigorous Coupled Wave Analysis) 
+with various formulations for the simulation of periodic stratified media 
+such as frequency selective surfaces, metamaterials, photonic crystal slabs 
+or diffraction gratings. 
+Both codes have built-in automatic adjoint calculation capabilities 
+that makes them suitable for gradient-based optimization.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\wfig{lens}{Inverse design of a multi-beam lens antenna. Permittivities: material 0:  $\varepsilon = 3$, material 1:  $\varepsilon = 6.5$, $\tan\delta = 0.004$. Lens size =  $1\lambda \times 6 \lambda$. Source - lens distance = $3\lambda$. Source – ground plane distance = $\lambda/4$. The objective is to maximize the directivity for two target angles : 0 and 30 degrees.\label{fig:lens}}{0.4}{R}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Topology optimization}
+% 
+% The development of photonics and electromagnetic devices with
+% characteristic size of the order of the wavelength has historically
+% relied on trial and error approaches. Starting from an a given physical
+% process, a small set of key parameters is tuned to achieve an acceptable
+% level of matching with a predefined figure of merit required by the
+% application. This intuition based method has helped to develop a diverse
+% and extensively used collection of designs, taking advantages of
+% photonic resonances, dispersion engineering, waveguiding or antenna
+% radiation principles enabling an increasingly finer 
+% control of light accross the electromagnetic spectrum.\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In the past two decades, topology optimization (TO)
+\autocite{bendsoeTopologyOptimizationTheory2013} has become a widely used
+tool in computational electromagnetism
+\autocite{moleskyInverseDesignNanophotonics2018} and has allowed the
+inverse design of a broad range of devices such as invisibility cloaks
+illusion devices\autocite{vialOptimizedMicrowaveIllusion2017},
+metasurfaces,
+photonic crystals
+and metamaterials,
+to name a few. Broadly speaking, density based TO is an inverse design
+procedure that can produce highly optimized structures serving a
+dedicated objective. One of its main advantage is to offer unparalleled
+design freedom since the material distribution is updated locally (at
+the pixel or voxel level) inside the domain of interest. On the other
+hand, fabrication constraints often limit this versatility and several
+auxiliary tools can be included to tackle those issues, for instance for
+imposing minimal length-scales or ensuring the connectivity of the
+resulting layout. Since the number of degrees of freedom is usually
+prohibitively high to obtain the gradient using naive finite
+differences, adjoint sensitivity analysis
+\autocite{jensenTopologyOptimizationNanophotonics2010} is an indispensable
+part of all inverse design algorithms. 
+During my work in QMUL, I have developed general tools for inverse design of 
+materials and devices. I plan to continue to improve those and apply them 
+to the design of antenna devices and metamaterials, that are related with 
+the rest of my research plans and offer my expertise to the group. 
+One area of improvement is the inclusion of metallic parts 
+with density based parametrization schemes, which show poor convergence 
+because of the high contrast in material conductivities\autocite{aageTopologyOptimizationMetallic2010}. 
+Another direction is to explore another strategy based on level-set functions 
+that remove the unphysical intermediate material properties. 
+Multi-objective optimization and parallelization on the school computing 
+cluster are already implemented. This design technique allows the production 
+of optimized parts with improved performances with often non intuitive, 
+complex layouts, which are particularly suited for 3D printing. 
+As an example of application, I include preliminary results on an optimized 
+metalens for beam shaping (cf. Fig.~\ref{fig:lens}).
+
+\subsection{Machine learning}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\wfig{ml}{Machine learning for electromagnetic design (a) Dielectric metasurface reflection spectra prediction (100 000 points in dataset, square unit cell with period=20mm made of two dielectrics with permittivity 3.0 ("0") and 4.5 ("1") and loss tangent 0.001, thickness=5mm). (b) Photonic crystal eigenmode prediction(100 000 points in dataset, input: permittivity pattern (2D, 32x32), output: 6 first eigenvalues/eigenmodes at three symmetry points of the first Brillouin zone.).\label{fig:ml}}{0.4}{L}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Recent advances in experimental and computational methods are increasing the quantity
+and complexity of generated data. Innovative approaches and tools play
+an important role in shaping design, characterization and optimization for the field of
+electromagnetism. In particular, deep learning offers an efficient means to design photonic
+structures\autocite{maDeepLearningDesign2020}, complementing conventional physics 
+and rule-based methods with data-driven paradigms. My objective is to use various machine 
+learning algorithms to predict antenna and metamaterial responses from 
+a dataset of computer simulations. Once the neural network is trained, one obtains 
+a fast reduced order model that can be employed to design and optimize novel EM devices 
+very efficiently. For instance, I have developed a surrogate based global optimization 
+code (based on a genetic algorithm), where computationally 
+expensive objective function evaluations are partly replaced by a learned model. 
+As an example, I have recently applied deep convolutional 
+neural networks for predicting the reflection response from a dielectric metasurface 
+at millimetre waves (see Fig.~\ref{fig:ml}a), which I plan to extend by 
+training the model on both amplitude and phase data, and include different polarization 
+of the incident wave, and use this fast model for optimization of spectral filters using 
+a layered approach by stacking multiple permittivity patterns. 
+Other recent results include the prediction of eigenvalues and eigenmodes of 2D 
+photonic crystals (cf. Fig.~\ref{fig:ml}b). Eventually, once the model is trained
+ one can predict quickly the eigenpairs at the symmetry points of the first Brillouin zone, 
+ and I plan to implement a reduced Bloch mode expansion\autocite{husseinReducedBlochMode2009} for fast band diagram and 
+ isofrequency contour calculations, so the resulting efficient simulation tool 
+ can be used for exploring and optimizing exotic physical effects such as dispersion engineering, hyperbolic media, maximized band-gap structures, exceptional and topological Photonics.
+  
+% %%%%%%%%%%%% Quantum %%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% \section{Microwave engineering for quantum computing}
+% 
+% In the last decade, quantum computing has grown from 
+% a mostly theoretical field to one that could potentially 
+% reshape computing as we know it. Several major industrial
+% research efforts\autocite{aruteQuantumSupremacyUsing2019}, 
+% together with large national research programmes (such as the 
+% UK National Quantum Technologies Programme\autocite{knightUKNationalQuantum2019}) 
+% worldwide are boosting this unique and emerging technological area, from 
+% dedicated software implementation to the design of devices necessary 
+% to built a working quantum computer. 
+% However, because quantum computing is highly interdisciplinary, 
+% there is currently a need for engineers who understand both the 
+% quantum foundations and microwave engineering aspects necessary to 
+% build a working quantum computer. \\
+% The fundamental information carriers in a quantum computer
+% are quantum bits, or qubits, in analogy to the logical bits used
+% in a classical computer. Due to quantum superposition, 
+% the $2^N$-dimensional state space of $N$ qubits can hold ex-
+% ponentially more information than that of $N$ classical bits,
+% offering the hope of greatly increased computing power, with the caveat 
+% that at the end result of a computation, the measured state will 
+% collapse to a single configuration due to entanglement.\\
+% Although many hardware platforms are still being pursued to implement quantum information
+% processing, including trapped ions,
+% bulk and integrated photonics, cold atoms,
+% semiconductor spin qubits, superconducting circuit architectures are one of the
+% leading candidates\autocite{blaisQuantuminformationProcessingCircuit2007, 
+% voolIntroductionQuantumElectromagnetic2017,guMicrowavePhotonicsSuperconducting2017}. 
+% These systems, also often called
+% circuit quantum electrodynamics (cQED) devices
+% Numerous research and technological challenges needs to 
+% be overcome to the scaling of quantum computing with such systems, also often called
+% circuit quantum electrodynamics (cQED) devices, and I plan to contribute 
+% to the advancement of.
+% Of the many superconducting qubits that have been designed
+% to date, the transmon has become one of the most widely
+% used since its creation and forms a key part of many scalable
+% quantum information processing architectures using superconducting circuits. 
+% Fundamentally, one way to think of a qubit is as a high-quality-factor 
+% electromagnetic resonator, but unlike ordinary linear resonators, 
+% qubits are extremely anharmonic (or nonlinear).
+% 
+% 
+% Beyond the classical to quantum interface, there are signif-
+% icant microwave challenges in the design of the quantum
+% processor itself. For instance, considering superconducting
+% qubits, as the dimensions of the quantum processor grow,
+% designers will have to rely more heavily on electromagnetic
+% simulation tools to predict and avoid undesired moding in
+% what will eventually become wafer-scale devices. Modeling
+% these effects requires incorporating superconducting physics
+% and the cryogenic properties of dielectrics into electromag-
+% netic tools while developing methods to efficiently solve for
+% high-Q resonances in large structures. Microwave expertise
+% will be required, both in developing efficient simulation tools
+% tailored to this purpose as well as in developing techniques to
+% mitigate these undesired modes.
+
+% 
+% Engage undergraduate students taking the Quantum Computation and Communication 
+% module as part of their research project.
+
+
+% 
+% Next, we can consider the quantum chip itself. The
+% typical pitch of 2D grids of transmon qubits is approxi-
+% mately 1 mm, so a notional grid of 1 million qubits might
+% therefore cover a square measuring 1 m on a side. Such
+% a device will not be composed of a single silicon chip.
+% Instead, many smaller chips will need to be stitched
+% together. Multichip assembly and 3D integration tech-
+% nologies will have to be adapted to the material sets,
+% loss and crosstalk requirements, cryogenic operation,
+% and layout constraints imposed by this application. The
+% chip-to-chip interconnect will need to have exquisitely
+% low loss and low crosstalk while maintaining the cou-
+% pling strength needed to do fast qubit–qubit logic gates.
+% Electromagnetic, thermal, and mechanical simulations
+% of the packaged assembly will become crucial. Parasitic
+% resonances and package modes in assemblies of the
+% envisioned size could overlap the qubit frequencies, and
+% their coupling to the qubits will have to be understood
+% and mitigated. These are just a few of the many areas in
+% which microwave engineering will be required in the
+% quest to implement a fault-tolerant quantum computer.
+% As the systems progress, it will be essential that more
+% microwave engineers engage in these effort
+
+
+
+% - https://uknqt.ukri.org/about/nqcc/
+
+% %%%%%%%%%%%% Track record %%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Track record}
+% \kant[2-4]
+% 
+% 
+% 
+% \newrefcontext[labelprefix=TR]
+% \printbibliography[title={Recent related publications from the team}]
+% 
+% 
+% %%%%%%%%%%%% Main body %%%%%%%%%%%%%%%%%%%%%%%%%
+% \newrefsection
+% \section{Research plan}
+% 
+% %% command for wrapped figure: 
+% %% \wfig{image_file}{cpation}{size}{position}
+% %% size between 0 and 1 (proportion of the page width
+% %% position is either right (R) or left (L)
+% % \wfig{img}{Caption for this figure\label{fig:1}}{0.5}{R}
+% 
+% 
+% \wfig{drawing}{Caption for this figure\label{fig:2}}{0.5}{R}
+% 
+% 
+% 
+% \subsection{Aims and Objectives}
+% \kant[3]
+%  Also see \fig{fig:1}, and some citations\autocite{foster2017beam, Vial2017, vial2016class} to appear at the end.\\
+% 
+% \workpackage{Title of this work package\label{wp:1}}{YH}{MR, BV}
+% \kant[4]
+% \task{This is the description of a task}
+% \task{This is the description of a second task}
+% 
+% Refer to WP~\ref{wp:1}.
+% 
+% 
+% \subsection{Expected Outcomes and Results}
+% \kant[5-6]
+% 
+% \wfig{drawing}{Caption for this figure\label{fig:1}}{0.4}{L}
+% 
+% \subsection{National Importance}
+% \kant[6]
+
+\printbibliography[title={References}]
+
+ 
+\end{document}

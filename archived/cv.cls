@@ -53,12 +53,13 @@
 \RequirePackage[quiet]{fontspec}
 %\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
-\newfontfamily\bodyfont[Ligatures=TeX,Scale=0.9]{OpenSans}
-\newfontfamily\thinfont[Ligatures=TeX,Scale=0.9]{OpenSans-Light}
+\newfontfamily\bodyfont[Ligatures=TeX,Scale=0.9]{Open Sans}
+\newfontfamily\thinfont[Ligatures=TeX,Scale=0.9]{Open Sans Light}
 \newfontfamily\headingfont[Ligatures=TeX,Scale=1]{Oswald Regular}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor,Ligatures=TeX,Scale=0.9]{OpenSans-Light}
+\setmainfont[Mapping=tex-text, 
+Color=textcolor,Ligatures=TeX,Scale=0.9]{Open Sans Light}
 
 %\setmathfont{XITS Math}
 
@@ -182,7 +183,7 @@
 %%%%%%%%%%%%%%%%
 
 \RequirePackage{keyval}
-\RequirePackage[maxnames=99, sorting=chronological, backend=biber, giveninits, defernumbers=true]{biblatex}%defernumbers=true ,
+\RequirePackage[maxnames=5, sorting=chronological, backend=biber, giveninits, defernumbers=true]{biblatex}%defernumbers=true ,
 %
 \setlength{\biblabelsep}{-\the\fontdimen2\font}
 \DeclareFieldFormat{labelnumberwidth}{\addspace}
@@ -351,7 +352,7 @@
 
 \RequirePackage{geometry}
 
-\RequirePackage{fontawesome}
+\RequirePackage{fontawesome5}
 
 
 % \RequirePackage{marvosym}
