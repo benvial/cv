@@ -9,14 +9,6 @@
 \ProcessOptions\relax
 \LoadClass{academia}
 
-%%%%%%%%%%%%%%%%
-% Bibliography %
-%%%%%%%%%%%%%%%%
-
-
-% remove numbers adnd adjust space
-\setlength{\biblabelsep}{-\the\fontdimen2\font}
-\DeclareFieldFormat{labelnumberwidth}{\addspace}
 
 
 \renewfontfamily\bodyfont[Ligatures=TeX,Scale=0.9]{Source Sans Pro}
@@ -26,5 +18,193 @@
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[Mapping=tex-text,
 Color=textcolor,Ligatures=TeX,Scale=0.9]{Source Sans Pro}
+\setmonofont[Ligatures=TeX,Scale=0.75]{Anonymous Pro}
 
 \titleformat{\subsection}{\large\bfseries\bfseries}{}{0.7em}{}
+
+
+
+
+
+%%%%%%%%%%%%%%%%
+% Bibliography %
+%%%%%%%%%%%%%%%%
+
+
+% \RequirePackage{keyval}
+% \RequirePackage[natbib=true, maxnames=50, sorting=none, giveninits, defernumbers=true]{biblatex}%defernumbers=true ,
+%
+% \setlength{\biblabelsep}{-\the\fontdimen2\font}
+% \DeclareFieldFormat{labelnumberwidth}{\addspace}
+
+\DeclareFieldFormat[article]{title}{#1 \addperiod\space}
+\DeclareFieldFormat[book]{title}{#1 \addperiod\space}
+\DeclareFieldFormat[inproceedings]{title}{#1 \addperiod\space}
+\DeclareFieldFormat[misc]{title}{#1 \addperiod\space}
+\DeclareFieldFormat[report]{title}{#1 \addperiod\space}
+
+% \DeclareBibliographyDriver{article}{%
+%   \printfield{title}%
+%   \newblock%
+%   \printnames{author}%
+%   \par%
+%   \newblock%
+%   {%
+%     \footnotesize\addfontfeature{Color=lightgray}\itshape%
+%     \usebibmacro{journal+issuetitle}%
+%     \setunit{\space}%
+%     \printfield{pages}%
+%     \newunit%
+%     \printlist{publisher}%
+%     \setunit*{\addcomma\space}%
+%     %\printfield{year}%
+%     \newunit%
+%   }
+%   \par\vspace{0.3\baselineskip}
+% }
+
+
+\DeclareBibliographyDriver{article}{%
+  \printnames{author}%
+  \addperiod\space
+  \newblock%
+  \itshape\printfield{title}%
+  \newblock%
+  {%
+    \addfontfeature{Color=lightgray}\itshape%
+    \usebibmacro{journal+issuetitle}%
+    \setunit{\space}%
+    \printfield{pages}%
+    %     \newunit%
+    %     \printlist{publisher}%
+    %\setunit*{\addcomma\space}%
+    %\printfield{year}%
+    %\newunit%
+  }
+  \par\vspace{0.3\baselineskip}
+}
+
+
+\DeclareBibliographyDriver{book}{%
+  \printnames{author}%
+  \addperiod\space
+  \newblock%
+  \itshape\printfield{title}%
+  \newblock%
+  {%
+    \addfontfeature{Color=lightgray}\itshape%
+    \printlist{publisher}%
+    \setunit*{\addcomma\space}%
+    \printfield{note}%
+    \setunit*{\addcomma\space}%
+    \printfield{year}%
+    \setunit{\addcomma\space}%
+    \printlist{location}%
+    %     \newunit%
+  }
+  \par\vspace{0.3\baselineskip}
+}
+
+
+\DeclareBibliographyDriver{inproceedings}{%
+  \printnames{author}%
+  \addperiod\space
+  \newblock%
+  \itshape\printfield{title}%
+  \newblock%
+  {%
+    \addfontfeature{Color=lightgray}%
+    \printfield{booktitle}%
+    \setunit{\addcomma\space}%
+    \printfield{year}%
+    \setunit{\addcomma\space}%
+    \printlist{location}%
+    %\newunit%
+  }
+  \par\vspace{0.3\baselineskip}
+}
+
+\DeclareBibliographyDriver{misc}{%
+  \printnames{author}%
+  \addperiod\space
+  \newblock%
+  \itshape\printfield{title}%
+  \newblock%
+  {%
+    \addfontfeature{Color=lightgray}\itshape%
+    \printfield{booktitle}%
+    \setunit*{\addcomma\space}%
+    \printfield{note}%
+    \setunit*{\addcomma\space}%
+    \printfield{year}%
+    %     \newunit%
+  }
+  \par\vspace{0.3\baselineskip}
+}
+
+\DeclareBibliographyDriver{report}{%
+  \printnames{author}%
+  \addperiod\space
+  \newblock%
+  \itshape\printfield{title}%
+  \newblock%
+  {%
+    \addfontfeature{Color=lightgray}\itshape%
+    \printfield{type}%
+    \setunit{\space}%
+    \printfield{number}%
+    \setunit{\addcomma\space}%
+    \printfield{year}%
+    %     \newunit%
+  }
+  \par\vspace{0.3\baselineskip}
+}
+
+\DeclareBibliographyDriver{software}{%
+  \printnames{author}%
+  \setunit*{\addperiod\space}%
+  \newblock%
+  \printfield{title}%
+  \newblock%
+  {%
+    \addfontfeature{Color=lightgray}%
+    \setunit*{\addcomma\space}%
+    \texttt{\printfield{note}}%
+    \setunit*{\addcomma\space}%
+    \printfield{year}%
+    %     \newunit%
+  }
+  \par\vspace{0.3\baselineskip}
+}
+
+% \DeclareNameFormat{author}{%
+%   \addfontfeature{Color=lightgray}%
+%   \ifthenelse{\value{listcount}<\value{liststop}\namepartgiven\space\namepartfamily\addcomma\space}
+% }
+
+
+% \DeclareNameFormat{author}{%
+% \addfontfeature{Color=lightgray}%
+% %     \nameparts{#1}
+%      \usebibmacro{name:family}
+%       {\namepartfamily}
+%       {\namepartgiven}
+%       {\namepartprefix}
+%       {\namepartsuffix}%
+%      }
+
+
+\DeclareSortingScheme{chronological}{
+  \sort[direction=descending]{\field{year}}
+  \sort[direction=descending]{\field{month}}
+}
+
+
+% \newcommand{\printbibsection}[2]{
+%   \begin{refsection}
+%     \nocite{*}
+%     \printbibliography[type={#1}, title={#2}, heading=subbibliography]
+%   \end{refsection}
+% }
+
+
