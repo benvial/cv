@@ -16,7 +16,7 @@ rp: clean
 	@mkdir -p build
 	@cd src && make -s rp && make -s clean
 
-cvfr: clean
+cvfr: 
 	@mkdir -p build
 	@cd src && make -s cvfr && make -s clean
 
